@@ -1,0 +1,36 @@
+-- This is from the original megumin hub btw.
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aidanman14/MeguminHub/refs/heads/main/Storage/LoadingGui"))()
+
+local LOGOLOAD = game:GetService("CoreGui").Loading.logoload
+local LOGONAME = LOGOLOAD.TextLabel
+local blur = Instance.new("BlurEffect", game.Lighting) blur.Size = 0
+local Culor = Instance.new("ColorCorrectionEffect", game.Lighting)
+local TweenService = game:GetService("TweenService")
+local CULOR1 = TweenService:Create(Culor, TweenInfo.new(1), {TintColor = Color3.fromRGB(221, 46, 68)})
+local CULOR2 = TweenService:Create(Culor, TweenInfo.new(1), {TintColor = Color3.fromRGB(255, 255, 255)})
+local BLUR1 = TweenService:Create(blur, TweenInfo.new(1), {Size = 24})
+local BLUR2 = TweenService:Create(blur, TweenInfo.new(1), {Size = 0 })
+local LOGOLOAD1 = TweenService:Create(LOGOLOAD, TweenInfo.new(1), {ImageTransparency = 0 })
+local LOGONAME1 = TweenService:Create(LOGONAME, TweenInfo.new(1), {TextTransparency = 0 })
+local LOGOLOAD2 = TweenService:Create(LOGOLOAD, TweenInfo.new(1), {ImageTransparency = 1 })
+local LOGONAME2 = TweenService:Create(LOGONAME, TweenInfo.new(1), {TextTransparency = 1 })
+
+task.wait(2)
+BLUR1:Play()
+CULOR1:Play()
+task.wait(1)
+LOGOLOAD1:Play()
+LOGONAME1:Play()
+task.wait(2)
+LOGOLOAD2:Play()
+LOGONAME2:Play()
+task.wait(1)
+CULOR2:Play()
+BLUR2:Play()
+task.wait(1)
+Culor:Destroy()
+blur:Destroy()
+task.wait(0.25)
+game:GetService("CoreGui").Loading:Destroy()
+
