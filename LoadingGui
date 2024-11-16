@@ -1,0 +1,45 @@
+-- Instances: 4 | Scripts: 0 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Loading
+G2L["1"] = Instance.new("ScreenGui", game:GetService("CoreGui"));
+G2L["1"]["Name"] = [[Loading]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.Loading.logoload
+G2L["2"] = Instance.new("ImageLabel", G2L["1"]);
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["ImageTransparency"] = 1;
+G2L["2"]["Image"] = [[rbxassetid://2801723051]];
+G2L["2"]["Size"] = UDim2.new(0, 300, 0, 300);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2"]["BackgroundTransparency"] = 1;
+G2L["2"]["Name"] = [[logoload]];
+G2L["2"]["Position"] = UDim2.new(0.42, 0, 0.16, 0);
+
+
+-- StarterGui.Loading.logoload.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 150);
+
+
+-- StarterGui.Loading.logoload.TextLabel
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["TextStrokeColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4"]["TextTransparency"] = 1;
+G2L["4"]["TextScaled"] = true;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["TextSize"] = 30;
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4"]["BackgroundTransparency"] = 1;
+G2L["4"]["Size"] = UDim2.new(0, 300, 0, 50);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["4"]["Text"] = [[M E G U M I N   H U B]];
+G2L["4"]["Position"] = UDim2.new(0, 0, 1, 0);
+
+
+
+return G2L["1"], require;
