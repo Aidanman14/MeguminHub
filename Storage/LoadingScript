@@ -5,7 +5,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Aidanman14/MeguminHub
 local LOGOLOAD = game:GetService("CoreGui").Loading.logoload
 local LOGONAME = LOGOLOAD.TextLabel
 local blur = Instance.new("BlurEffect", game.Lighting) blur.Size = 0
-local Culor = Instance.new("ColorCorrectionEffect", game.Lighting)
+local Culor = Instance.new("ColorCorrectionEffect", game:GetService("Lighting"))
 local TweenService = game:GetService("TweenService")
 local CULOR1 = TweenService:Create(Culor, TweenInfo.new(1), {TintColor = Color3.fromRGB(221, 46, 68)})
 local CULOR2 = TweenService:Create(Culor, TweenInfo.new(1), {TintColor = Color3.fromRGB(255, 255, 255)})
@@ -33,4 +33,3 @@ Culor:Destroy()
 blur:Destroy()
 task.wait(0.25)
 game:GetService("CoreGui").Loading:Destroy()
-
